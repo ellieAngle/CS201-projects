@@ -16,7 +16,7 @@ public class PercolationBFS extends PercolationDFSFast {
 			int c = cell % myGrid.length;
 			if (inBounds(r+1, c) && isOpen(r+1, c) && ! isFull(r+1,c)) {
 				myGrid[r+1][c] = FULL;
-				int p = helperGetInt(r -1, c);
+				int p = helperGetInt(r +1, c);
 				que.add(p);
 				
 			}

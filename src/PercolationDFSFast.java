@@ -1,9 +1,19 @@
 public class PercolationDFSFast extends PercolationDFS {
-
+	/*
+	 * @param n: integer representing the number of rows and columns in grid
+	 * Initializes variables from PercolationDFS using super(n)
+	 */
 	public PercolationDFSFast(int n) {
 		super(n);
 		
 	}
+	/*
+	 * @see PercolationDFS#updateOnOpen(int, int)
+	 * @Overrides DFS updateOnOpen
+	 * @param row: integer representing selected row of opened cell
+	 * @param col: integer representing selected column of opened cell
+	 * uses only one dfs call, as opposed to calling dfs on all possible neighbors
+	 */
 	@Override
 	protected void updateOnOpen(int row, int col) {
 		boolean c1 = false;

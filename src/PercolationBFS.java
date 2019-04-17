@@ -1,9 +1,20 @@
 import java.util.*;
 public class PercolationBFS extends PercolationDFSFast {
-
+	/*
+	 * @param n: integer representing the number of rows and columns in grid
+	 * Initializes variables from PercolationDFS using super(n)
+	 */
 	public PercolationBFS(int n) {
 		super(n);
 	}
+	/*
+	 * @param row: integer representing selected row of opened cell
+	 * @param col: integer representing selected column of opened cell
+	 * Uses a queue to determine which cells need to be full
+	 * full cells are queued then dequeued, and their neighboring cells are checked
+	 * The method stops once there are no more cells needing filling
+	 *
+	 */
 	@Override
 	protected void dfs(int row, int col) {
 		Queue<Integer> que = new LinkedList<Integer>();

@@ -7,22 +7,39 @@ and using 20 trials
 
 PercolationDFSFast
 
-(copy paste here)
+grid	mean	stddev	total time
+100	0.593	0.019	0.137
+200	0.596	0.006	0.114
+400	0.592	0.006	0.422
+800	0.592	0.003	2.667
+Exception in thread "main" java.lang.StackOverflowError
 
 PercolationBF
 
-(copy paste here)
+grid	mean	stddev	total time
+100	0.593	0.019	0.138
+200	0.596	0.006	0.208
+400	0.592	0.006	0.465
+800	0.592	0.003	2.701
+1600	0.594	0.002	16.430
+3200	0.593	0.001	111.213
 
 PercolationUF with QuickUWPC
 
-(copy paste here)
+grid	mean	stddev	total time
+100	0.593	0.019	0.117
+200	0.596	0.006	0.179
+400	0.592	0.006	0.584
+800	0.592	0.003	2.156
+1600	0.594	0.002	12.063
+3200	0.593	0.001	59.298
 
 
 Answer these questions for PercolateUF with a QuickUWPC union-find object
 
 How does doubling the grid size affect running time (keeping # trials fixed)
 
-(answer)
+Doubling the grid size 
 
 How does doubling the number of trials affect running time.
 

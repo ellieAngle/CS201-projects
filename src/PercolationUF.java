@@ -29,19 +29,15 @@ public class PercolationUF implements IPercolate {
 		if (row == myGrid.length - 1) myFinder.union(x, VBOTTOM);
 		if (inBounds(row +1, col) && isOpen(row +1, col)) {
 			myFinder.union(x, getInt(row+1, col));
-			myOpenCount ++;
 		}
 		if (inBounds(row -1, col) && isOpen(row -1, col)) {
 			myFinder.union(x, getInt(row-1, col));
-			myOpenCount ++;
 		}
 		if (inBounds(row, col+ 1) && isOpen(row, col + 1)) {
 			myFinder.union(x, getInt(row, col + 1));
-			myOpenCount ++;
 		}
 		if (inBounds(row, col- 1) && isOpen(row, col - 1)) {
 			myFinder.union(x, getInt(row, col - 1));
-			myOpenCount ++;
 		}
 	}
 
@@ -72,8 +68,7 @@ public class PercolationUF implements IPercolate {
 
 	@Override
 	public int numberOfOpenSites() {
-		if (myOpenCount == 0) return myOpenCount;
-		return myOpenCount - 1;
+		return myOpenCount;
 	}
 	protected boolean inBounds(int row, int col) {
 		if (row < 0 || row >= myGrid.length) return false;

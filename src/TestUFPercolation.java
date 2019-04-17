@@ -4,9 +4,9 @@ import org.junit.jupiter.api.*;
 public class TestUFPercolation {
 	
 	public IPercolate getPercolator(int size) {
-		IUnionFind finder = new QuickFind();
-		//IPercolate perc = new PercolationUF(size,finder);
-		IPercolate perc = null;
+		IUnionFind finder = new QuickUWPC();
+		IPercolate perc = new PercolationUF(size,finder);
+		//IPercolate perc = null;
 		return perc;
 	}
 	

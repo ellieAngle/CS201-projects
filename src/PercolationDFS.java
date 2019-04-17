@@ -36,7 +36,7 @@ public class PercolationDFS implements IPercolate {
 		
 		if (! inBounds(row,col)) {
 			throw new IndexOutOfBoundsException(
-					String.format("(%d,%d) not in bounds", row,col));
+				String.format("(%d,%d) not in bounds", row,col));
 		}
 		if (myGrid[row][col] != BLOCKED)
 			return;

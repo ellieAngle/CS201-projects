@@ -72,6 +72,7 @@ public class PercolationUF implements IPercolate {
 
 	@Override
 	public int numberOfOpenSites() {
+		if (myOpenCount == 0) return myOpenCount;
 		return myOpenCount - 1;
 	}
 	protected boolean inBounds(int row, int col) {

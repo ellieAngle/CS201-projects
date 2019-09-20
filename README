@@ -1,0 +1,2 @@
+# Program that estimates the value of the percolation threshold via Monte Carlo simulation. 
+# implements depth-first search and union-find structures 
